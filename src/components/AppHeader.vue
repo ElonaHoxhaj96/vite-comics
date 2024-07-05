@@ -37,11 +37,14 @@ export default {
     }
     li{
        list-style: none;
-       
+       :hover{
+            border-bottom: solid 0.2rem blue;
+            }
        a{
         text-decoration: none;
         color: rgb(88, 88, 88);
         font-weight: bold;
+        padding: 1rem; 
        }
     }
 
