@@ -1,6 +1,56 @@
 <script>
 export default {
     name: 'AppHeader',
+    date(){
+    return{
+        activeIndex: 0,
+        linksMenu:[
+          { 
+            text: 'CHARACTER',
+            url: '#',
+          },
+          { 
+            text: 'MOVIES',
+            url: '#'
+          },
+          { 
+            text: 'TV',
+            url: '#'
+          },
+          { 
+            text: 'GAMES',
+            url: '#'
+          },
+          { 
+            text: 'COLLECTIBLES',
+            url: '#'
+          },
+          { 
+            text: 'VIDEOS',
+            url: '#'
+          },
+          { 
+            text: 'FANS',
+            url: '#'
+          },
+          { 
+            text: 'NEWS',
+            url: '#'
+          },
+          { 
+            text: 'SHOP',
+            url: '#'
+          },
+        ],
+
+    }
+},
+methods: {
+  toggleNav(index) {
+    this.activeIndex = index;
+    console.log(this.toggleNav);
+  }
+}
 }
 </script>
 
@@ -12,15 +62,9 @@ export default {
                 <img src="../assets/dc-logo.png" alt="logo">
             </div>
             <ul>
-                <li><a href="#">CHARACTER</a></li>
-                <li><a href="#">MOVIES</a></li>
-                <li><a href="#">TV</a></li>
-                <li><a href="#">GAMES</a></li>
-                <li><a href="#">COLLECTIBLES</a></li>
-                <li><a href="#">VIDEOS</a></li>
-                <li><a href="#">FANS</a></li>
-                <li><a href="#">NEWS</a></li>
-                <li><a href="#">SHOP</a></li>
+                <li v-for="(link, index) in linksMenu" :key="index">
+                    <a :href="link.url" class=":hover">{{link.text}}</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -30,6 +74,7 @@ export default {
     nav{
         display: flex;
         justify-content: space-around;
+        align-items: center;
     }
     ul{
         display: flex;
@@ -44,7 +89,7 @@ export default {
         text-decoration: none;
         color: rgb(88, 88, 88);
         font-weight: bold;
-        padding: 1rem; 
+        padding-bottom: 2.4rem; 
        }
     }
 

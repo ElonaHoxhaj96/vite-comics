@@ -1,18 +1,24 @@
 <script>
-import AppHeader from './components/AppHeader.vue'
-import AppMain from './components/AppMain.vue'
+import AppHeader from './components/AppHeader.vue';
+import Content from './components/Content.vue';
+import BannerBlu from './components/BannerBlu.vue';
+
 export default{
   name:'App',
   components:{
     AppHeader, 
-    AppMain,
+    Content,
+    BannerBlu,
   } 
 }
 </script>
 
 <template>
   <AppHeader />
-  <AppMain/>
+  <main>
+    <Content/>
+    <BannerBlu/>
+  </main>
 </template>
 
 <style lang="scss"> 

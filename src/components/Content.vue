@@ -1,23 +1,24 @@
 <script>
 export default{
-    name: 'AppMain',
+    name: 'Content',
 }
 </script>
 
 
 <template> 
-    <main>
+    <section>
         <div class="container">
             <h1> --> CONTENT GOES HERE <--</h1>
         </div>
 
-    </main>
+    </section>
 </template>
 
-<style>
+<style lang="scss" scoped>
     main{
         .container{
             min-height: 150px;
+            width: 100%;
             background-color: black;
                 h1{
                     color: white;
