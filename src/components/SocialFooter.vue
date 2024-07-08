@@ -18,7 +18,7 @@ export default{
 
 <template>
     <section id="container_social">
-        <button>SIGN-UN NOW</button>
+        <button><a href="#">SIGN-UN NOW</a></button>
         <div id="icone_social">
             <a href="#" class="blu">FOLLOW US</a>
             <a href="#" v-for="(icon, index) in socialIconas" :key="index">
