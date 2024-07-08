@@ -121,7 +121,7 @@ export default{
 
 <template>
     <section id="contenitor_link">
-
+        <img src="../assets/dc-logo-bg.png" class="logo" alt="">
     </section>
 
 </template>
@@ -131,6 +131,13 @@ export default{
         width: 100%;
         height: 400px;
         background-image: url(src/assets/footer-bg.jpg);
+        position: relative
+     
     }
-
+    .logo{
+        color: blue;
+        width: 400px;
+        position: absolute;
+        right: 15rem;
+    }
 </style>
