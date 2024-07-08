@@ -1,48 +1,55 @@
 <script>
 export default{
   name: 'BannerBlu',
-  date(){
-    return{
-
-        imgBanner:[
+  data() {
+    return {
+        activeIcona: 0,
+        imgBanner: [
             {
-                imgage: '../assets/buy-comics-digital-comics.png',
+                imgage: 'src/assets/buy-comics-digital-comics.png',
                 testo: 'DIGITAL COMICS'
             },
             {
-                imgage: '../assets/buy-comics-merchandise.png',
+                imgage: 'src/assets/buy-comics-merchandise.png',
                 testo: 'DC MERCHANDISE'
             },
             {
-                imgage: '../assets/buy-comics-subscriptions.png',
+                imgage: 'src/assets/buy-comics-subscriptions.png',
                 testo:'SUBSCRIPTION'
             },
             {
-                imgage: '../assets/buy-comics-shop-locator.png',
+                imgage: 'src/assets/buy-comics-shop-locator.png',
                 testo: 'COMIC SHOP LOCATOR'
             },
             {
-                imgage: '../assets/buy-dc-power-visa.svg',
+                imgage: 'src/assets/buy-dc-power-visa.svg',
                 testo: 'DC POWER VISA'
             },
-    ]
-
+        ], 
+        methods: {
+            iconaAttiva(index) {
+            this.activeIcona = index;
+            console.log(this.iconaAttiva);
+        }
+        }
     }
 }
 }
-
 </script>
 
 <template>
     <section id="bg_blue">
-        <div class="cards">
-            <div class="images" v-for="(icone, index) in imgBanner" :key="index">
-                <img :src="icone.imgage" alt="icona banner">
-            </div>
-            <div class="testo_img">
-                {{icone.testo}}
-            </div>
-        </div>              
+        <ul class="ds_flex">
+            <li class="ds_flex" v-for="(icona, index) in imgBanner" :key="index">
+                <a href="#" class="ds_flex" >
+                    <div class="images">
+                        <img :src="icona.imgage" alt="icona banner">
+                    </div>
+                    <span class="testo_img">{{ icona.testo }}</span>
+                </a>
+            </li>
+        </ul>
+                     
     </section>
 </template>
 
@@ -52,16 +59,19 @@ export default{
         display: flex;
         height: 150px;
     }
-    .cards{
+    .ds_flex{
         color: white;
         margin: auto;
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 1rem;
   
-
+        a{
+            gap: 0.3rem;
+            text-decoration: none;
+        }
         .images{
-            width: 4rem;
+            width: 3.5rem;
 
             img{
                 width: 100%;

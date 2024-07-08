@@ -1,8 +1,8 @@
 <script>
 export default {
     name: 'AppHeader',
-    date(){
-    return{
+    data() {
+    return {
         activeIndex: 0,
         linksMenu:[
           { 
