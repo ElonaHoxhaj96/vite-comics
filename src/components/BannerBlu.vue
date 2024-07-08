@@ -54,6 +54,7 @@ export default{
 </template>
 
 <style lang="scss">
+    @use '../styles/general.scss' as *;
     #bg_blue{
         background-color: rgb(48, 157, 215);
         display: flex;
@@ -68,7 +69,6 @@ export default{
   
         a{
             gap: 0.3rem;
-            text-decoration: none;
         }
         .images{
             width: 3.5rem;
