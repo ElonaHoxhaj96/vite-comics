@@ -56,7 +56,7 @@ export default{
 <style lang="scss">
     @use '../styles/general.scss' as *;
     #bg_blue{
-        background-color: rgb(48, 157, 215);
+        background-color: #0282f9;
         display: flex;
         height: 150px;
     }

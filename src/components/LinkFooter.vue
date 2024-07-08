@@ -168,8 +168,7 @@ export default{
         position: relative;
         padding: 5rem;
         display: flex;
-        gap: 2rem
-     
+        gap: 3rem;
     }
     .logo{
         color: blue;
@@ -177,6 +176,9 @@ export default{
         position: absolute;
         top:0;
         right: 15rem;
+    }
+    .left{
+        margin-left: 8rem;
     }
     .link_cards{
         margin-bottom:1rem;
