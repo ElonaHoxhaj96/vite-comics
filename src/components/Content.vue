@@ -1,6 +1,12 @@
 <script>
+import Cards from './Cards.vue';
+
 export default{
     name: 'Content',
+    components: {
+        Cards,
+    },
+    
     data(){
         return{
         seriesCurrent: [
@@ -85,44 +91,25 @@ export default{
 
 <template> 
     <section>
-        <div class="container">
-           <div class="card_series" v-for="(serie, index) in  seriesCurrent" :key="index">
-                <div><img :src="serie.thumb" alt="copertina"></div>
-                <h4>{{ serie.series }}</h4>
-           </div>
+        <div class="container_card">
+           <Cards v-for="(serie, index) in seriesCurrent" :key="index" :copertina="serie"/>
         </div>
 
     </section>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 @use '../styles/general.scss' as *;
     section{
-        min-height: 150px;
+        min-height: 100vh;
         width: 100%;
         background-color: black;
-        .container{
-            width: 70%;
+        .container_card{
+            width: 80%;
             margin: auto;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-        }
-        .card_series{
-            width: calc(100% / 6);
-            margin: 2rem 0;
-            display: flex;
-                flex-wrap: wrap;
-                justify-content: baseline;
-            div{
-                width: 80%;
-              
-                
-                    img{
-                    width: 100%;
-                    }
-            }
-           
         }
     }
 </style>
